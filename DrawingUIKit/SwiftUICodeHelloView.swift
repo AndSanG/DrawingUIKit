@@ -12,7 +12,7 @@ struct SwiftUICodeHelloView: View {
     var body: some View {
        
             VStack {
-                Text("Hello,This is SwiftUI")
+                Text("Hello,This is SwiftUI with UIKit UINavigationController")
                 Button("Go to details") {
                     openDetailsSwiftUI()
                 }
@@ -23,12 +23,6 @@ struct SwiftUICodeHelloView: View {
     }
     func openDetailsSwiftUI() {
         navigateToDetail = true
-    }
-}
-
-struct SwiftUICodeHelloDetailView: View {
-    var body: some View {
-        Text("Detail written in SwiftUI")
     }
 }
 
