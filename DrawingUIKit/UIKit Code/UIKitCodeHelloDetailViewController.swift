@@ -16,16 +16,20 @@ class UIKitCodeHelloDetailViewController: UIViewController {
         view.backgroundColor = .systemBackground
         
         let label = UILabel()
-        label.text = "detail"
+        label.text = "This is a UIKit UIView created programmatically that is used to display a detail view"
         label.textAlignment = .center
         label.textColor = .label
-        label.font = UIFont.preferredFont(forTextStyle: .title2)
+        label.font = UIFont.preferredFont(forTextStyle: .body)
         label.translatesAutoresizingMaskIntoConstraints = false
-        
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+                
         view.addSubview(label)
         NSLayoutConstraint.activate([
             label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            label.leadingAnchor.constraint(greaterThanOrEqualTo: view.layoutMarginsGuide.leadingAnchor, constant: 16),
+            label.trailingAnchor.constraint(lessThanOrEqualTo: view.layoutMarginsGuide.trailingAnchor, constant: -16)
         ])
     }
 }

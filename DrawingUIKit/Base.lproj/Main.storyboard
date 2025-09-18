@@ -87,11 +87,11 @@
             </objects>
             <point key="canvasLocation" x="-854" y="37"/>
         </scene>
-        <!--SwiftUI SB-->
+        <!--SwiftUI Add-->
         <scene sceneID="Hum-kS-TdR">
             <objects>
                 <navigationController id="0sH-K4-qUU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="SwiftUI SB" image="building.fill" catalog="system" id="9gQ-kf-21V"/>
+                    <tabBarItem key="tabBarItem" title="SwiftUI Add" image="building.fill" catalog="system" id="9gQ-kf-21V"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7X6-rt-5dN">
                         <rect key="frame" x="0.0" y="118" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -121,7 +121,7 @@
             </objects>
             <point key="canvasLocation" x="-853" y="-713"/>
         </scene>
-        <!--Title-->
+        <!--Detail-->
         <scene sceneID="y0v-KC-GfQ">
             <objects>
                 <viewController id="tL3-h6-tJE" sceneMemberID="viewController">
@@ -129,8 +129,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Inside World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ah-m4-W4y">
-                                <rect key="frame" x="127.66666666666669" y="455.33333333333331" width="138" height="20.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a UIKit UIView created using the Interface Builder of a Story Board." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ah-m4-W4y">
+                                <rect key="frame" x="16" y="428.33333333333331" width="361" height="40.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -140,27 +140,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <accessibility key="accessibilityConfiguration" identifier="HelloInside"/>
                         <constraints>
+                            <constraint firstItem="2ah-m4-W4y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="X3V-sY-CSc" secondAttribute="leading" constant="16" id="4cE-WA-Qzz"/>
+                            <constraint firstItem="2ah-m4-W4y" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X3V-sY-CSc" secondAttribute="trailing" constant="-16" id="VLo-vt-2Pr"/>
                             <constraint firstItem="2ah-m4-W4y" firstAttribute="centerX" secondItem="X3V-sY-CSc" secondAttribute="centerX" id="VW1-ic-PdD"/>
                             <constraint firstItem="2ah-m4-W4y" firstAttribute="centerY" secondItem="X3V-sY-CSc" secondAttribute="centerY" id="rZC-RJ-dBX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" prompt="prompt" id="rja-Oo-FQM">
+                    <navigationItem key="navigationItem" title="Detail" id="rja-Oo-FQM">
                         <barButtonItem key="backBarButtonItem" title="Hide" image="eraser" catalog="system" id="i8V-nW-OGO"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qlr-qq-uTd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1301.5267175572519" y="-713.38028169014092"/>
-        </scene>
-        <!--Hosting Controller-->
-        <scene sceneID="0EV-qg-5XU">
-            <objects>
-                <hostingController id="qLr-vq-43d" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="rmn-yI-FyL"/>
-                </hostingController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VNm-bl-l5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1302" y="782"/>
         </scene>
         <!--UIKit to SwiftUI-->
         <scene sceneID="CmW-dl-O2U">
@@ -169,30 +161,8 @@
                     <view key="view" contentMode="scaleToFill" id="bbV-0v-OJG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBD-aP-FO7">
-                                <rect key="frame" x="134" y="431" width="125" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Show SwiftUI"/>
-                                <connections>
-                                    <segue destination="qLr-vq-43d" kind="show" destinationCreationSelector="showSwiftUIView:" id="yT1-WQ-sZf"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, this is UIKit." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jn-ns-Aw3">
-                                <rect key="frame" x="127.66666666666669" y="402" width="138" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gxv-h4-rW0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ZBD-aP-FO7" firstAttribute="centerY" secondItem="gxv-h4-rW0" secondAttribute="centerY" id="DfK-DS-B0a"/>
-                            <constraint firstItem="2jn-ns-Aw3" firstAttribute="centerX" secondItem="ZBD-aP-FO7" secondAttribute="centerX" id="ap3-wf-AHC"/>
-                            <constraint firstItem="ZBD-aP-FO7" firstAttribute="top" secondItem="2jn-ns-Aw3" secondAttribute="bottom" constant="8" symbolic="YES" id="dnP-iZ-HYu"/>
-                            <constraint firstItem="ZBD-aP-FO7" firstAttribute="centerX" secondItem="gxv-h4-rW0" secondAttribute="centerX" id="tO3-lk-7ua"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="UIKit to SwiftUI" id="pdv-sc-I9t"/>
                 </viewController>
@@ -200,11 +170,11 @@
             </objects>
             <point key="canvasLocation" x="239" y="782"/>
         </scene>
-        <!--SwiftUI Code-->
+        <!--SwiftUI Init-->
         <scene sceneID="YtG-eL-nHP">
             <objects>
                 <hostingController id="Ocb-W8-CQI" customClass="SwiftUICodeHostingController" customModule="DrawingUIKit" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="SwiftUI Code" image="building.fill" catalog="system" id="irb-SX-ywQ"/>
+                    <tabBarItem key="tabBarItem" title="SwiftUI Init" image="building.fill" catalog="system" id="irb-SX-ywQ"/>
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmr-VE-BXU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
