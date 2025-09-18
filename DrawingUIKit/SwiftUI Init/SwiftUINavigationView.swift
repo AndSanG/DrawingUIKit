@@ -12,7 +12,7 @@ struct SwiftUINavigationView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Hello, This is SwiftUI NavigationStack")
+                Text("Hello init host")
                 Button("Go to details ") {
                     navigateToDetail=true
                 }

@@ -12,7 +12,8 @@ struct SwiftUICodeHelloView: View {
     var body: some View {
        
             VStack {
-                Text("Hello World SwiftUI view inside a UIKit UINavigationController")
+                Text("Hello add a host")
+                    .multilineTextAlignment(.center)
                 Button("Go to details") {
                     openDetailsSwiftUI()
                 }
