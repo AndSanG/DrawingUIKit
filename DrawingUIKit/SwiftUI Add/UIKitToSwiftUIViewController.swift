@@ -9,9 +9,11 @@ import UIKit
 import SwiftUI
 
 class UIKitToSwiftUIViewController: UIViewController{
-    private let host = UIHostingController(rootView: SwiftUICodeHelloView())
+    private var host: UIHostingController<SwiftUICodeHelloView>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        host = UIHostingController(rootView: SwiftUICodeHelloView(navigationController: self.navigationController))
         addChild(host)
         view.addSubview(host.view)
         host.view.translatesAutoresizingMaskIntoConstraints = false
@@ -20,9 +22,7 @@ class UIKitToSwiftUIViewController: UIViewController{
             host.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             host.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             host.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            
         ])
         host.didMove(toParent: self)
     }
-    
 }

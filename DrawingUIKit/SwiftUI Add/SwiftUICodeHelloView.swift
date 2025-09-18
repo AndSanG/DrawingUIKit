@@ -6,27 +6,27 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct SwiftUICodeHelloView: View {
-    @State private var navigateToDetail: Bool = false
+    let navigationController: UINavigationController?
+    
     var body: some View {
-       
-            VStack {
-                Text("Hello add a host")
-                    .multilineTextAlignment(.center)
-                Button("Go to details") {
-                    openDetailsSwiftUI()
-                }
-                NavigationLink("SwiftUI Detail", destination: SwiftUICodeHelloDetailView(), isActive: $navigateToDetail)
-                    .hidden()
-            }
-            .navigationTitle("SwiftUI View")
+        SwiftUICodeHelloViewContent(
+            title: "Go to details",
+            subtitle: "Hello add a host long message",
+            action: goToDetail)
     }
-    func openDetailsSwiftUI() {
-        navigateToDetail = true
+    
+    func goToDetail() {
+        if let nav = navigationController {
+            let hosting = UIHostingController(rootView: SwiftUICodeHelloDetailView())
+            nav.pushViewController(hosting, animated: true)
+        }
     }
 }
 
 #Preview {
-    SwiftUICodeHelloView()
+    SwiftUICodeHelloView(navigationController: UINavigationController())
 }
+

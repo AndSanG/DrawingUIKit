@@ -11,17 +11,18 @@ struct SwiftUINavigationView: View {
     @State private var navigateToDetail: Bool = false
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("Hello init host")
-                Button("Go to details ") {
+            SwiftUICodeHelloViewContent(
+                title: "Go to details",
+                subtitle: "Hello init host"){
                     navigateToDetail=true
                 }
-            }
-            .navigationDestination(isPresented:$navigateToDetail) {
-                SwiftUICodeHelloDetailView()
-            }
+                .navigationTitle("SwiftUI Init")
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationDestination(isPresented:$navigateToDetail) {
+                    SwiftUICodeHelloDetailView()
+                }
         }
-        .navigationTitle("SwiftUI Navigation")
+        
     }
 }
 

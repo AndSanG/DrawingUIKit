@@ -20,9 +20,9 @@ class UIKitCodeHelloViewController: UIViewController {
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(label)
-
         let button = UIButton(type: .system)
         button.setTitle("Go to details", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 17, weight: .regular)
         button.addTarget(self, action: #selector(openDetails), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(button)
