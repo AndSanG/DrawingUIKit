@@ -15,7 +15,7 @@ class UIKitCodeHelloViewController: UIViewController {
         view.backgroundColor = .systemBackground
         
         let label = UILabel()
-        label.text = "Hello World UIKit CD"
+        label.text = "Hello World UIKit. \n\n This UI is created programmatically uing a UIKit view controller. Uses programatic autolayout, the buttons action are set programmatically as well."
         label.textAlignment = .center
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false

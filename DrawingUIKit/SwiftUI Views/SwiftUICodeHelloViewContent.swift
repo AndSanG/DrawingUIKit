@@ -29,6 +29,7 @@ struct SwiftUICodeHelloViewContent: View {
         .overlay(alignment: .center) {
             Text(subtitle)
                 .font(.system(size: 17, weight: .regular))
+                .multilineTextAlignment(.center)
                 .background(
                     GeometryReader { proxy in
                         Color.clear

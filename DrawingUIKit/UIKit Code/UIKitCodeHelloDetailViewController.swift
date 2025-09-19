@@ -16,7 +16,7 @@ class UIKitCodeHelloDetailViewController: UIViewController {
         view.backgroundColor = .systemBackground
         
         let label = UILabel()
-        label.text = "This is a UIKit UIView created programmatically that is used to display a detail view"
+        label.text = "This is a UIKit UIView created programmatically that is used to display a detail view."
         label.textAlignment = .center
         label.textColor = .label
         label.font = UIFont.preferredFont(forTextStyle: .body)

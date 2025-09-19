@@ -14,7 +14,7 @@ struct SwiftUICodeHelloView: View {
     var body: some View {
         SwiftUICodeHelloViewContent(
             title: "Go to details",
-            subtitle: "Hello add a host long message",
+            subtitle: "Hello World SwiftUI inside UIKit.\n \n This UI is created by intantiating a HostingController in the viewDidLoad of a UIViewController with addChild and addSubview. Here the layout constraints are needed to position the SwiftUIView correctly within the UIViewController.",
             action: goToDetail)
     }
     
